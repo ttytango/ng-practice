@@ -1,0 +1,44 @@
+<div class="w-full md:w-1/2 p-2 mx-auto rounded bg-blue-100/40">
+	<form [formGroup]="postForm" (ngSubmit)="onSubmit()">
+		<div class="form-control group">
+			<input
+					class="peer-focus:scale-75 peer-focus:-translate-y-6 peer"
+					type="text"
+					name="title"
+					id="title"
+					placeholder=" "
+					required
+          formControlName="title"
+      />
+			<label
+					class="absolute peer-focus:left-0 peer-focus:text-blue-600
+					peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100
+					peer-placeholder-shown:translate-y-0"
+					for="title">Enter Title</label>
+		</div>
+    <div class="form-control group">
+
+    <input
+      class="peer-focus:scale-75 peer-focus:-translate-y-6 peer"
+      type="title"
+      name="content"
+      id="content"
+      placeholder=" "
+      required
+      formControlName="content"
+    />
+    <label
+      class="absolute peer-focus:left-0 peer-focus:text-blue-600
+					peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100
+					peer-placeholder-shown:translate-y-0"
+      for="content">Enter Content</label>
+    </div>
+
+		<div class="w-2/6">
+			<button
+					type="submit"
+					class="btn btn-primary">Submit
+			</button>
+		</div>
+	</form>
+</div>
