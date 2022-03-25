@@ -1,1 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn {
+    @apply px-1.5 py-1 rounded m-1;
+  }
+  .btn-primary {
+    @apply bg-green-300 focus:bg-green-700 ring ring-opacity-0 focus:ring-offset-2 hover:bg-green-200 focus:ring-opacity-100 ring-blue-400 transition-all;
+  }
+}
+
+
