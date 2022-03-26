@@ -3,6 +3,9 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { PostsService } from '../posts.service';
 import { Post } from '../post';
 import { Subject, takeUntil } from 'rxjs';
+import * as FormStatus from '../form-status';
+
+
 
 @Component({
   selector: 'app-post-form',
@@ -13,7 +16,11 @@ export class PostFormComponent implements OnInit, OnDestroy {
   postForm: FormGroup;
   posts: Post[] = [];
   private destroy$ = new Subject<boolean>();
-  validStatus: "VALID" | "INVALID" | "PENDING" | "DISABLED";
+  validStatus:
+    | FormStatus.VALID
+    | FormStatus.INVALID
+    | FormStatus.PENDING
+    | FormStatus.DISABLED;
 
   constructor(
     private postsService: PostsService
@@ -43,4 +50,10 @@ export class PostFormComponent implements OnInit, OnDestroy {
     this.destroy$.unsubscribe();
   }
 
+  // addPostUser() {
+  //   this.postsService.addPostUser()
+  //     .pipe(takeUntil(this.destroy$))
+  //     .subscribe(result => this.postsService.notify(result))
+  //   this.postForm.reset();
+  // }
 }

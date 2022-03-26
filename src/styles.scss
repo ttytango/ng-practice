@@ -2,9 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+$disabled: rgba(106, 111, 109, 0.31);
+
+:disabled {
+  background-color: $disabled;
+  &:hover {
+    background-color: $disabled;
+  }
+}
+
 @layer components {
   .btn {
-    @apply font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center ;
+    @apply font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center;
   }
   .btn-primary {
     @apply text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300

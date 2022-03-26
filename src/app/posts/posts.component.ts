@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PostsService } from './posts.service';
-import { map, Subject, Subscription, takeUntil } from 'rxjs';
+import { map, Subject, Subscription, takeUntil, tap } from 'rxjs';
 import { Post } from './post';
 
 @Component({
@@ -37,4 +37,9 @@ export class PostsComponent implements OnInit {
   }
 
 
+  deletePost(id: string) {
+    this.postsService.deleteOnePost(id)
+      .pipe(takeUntil(this.destroy$))
+      .subscribe(result => this.postsService.notify(result))
+  }
 }

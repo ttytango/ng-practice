@@ -1,5 +1,16 @@
-<div class="w-full md:w-1/2 p-2 mx-auto rounded bg-blue-100/40">
+<div class="w-full md:w-1/2 p-2 px-6 mx-auto rounded bg-blue-100/60 shadow">
 	<form [formGroup]="postForm" (ngSubmit)="onSubmit()">
+
+<!--    <div class="form-control left group p-6">-->
+<!--      <label for="user-name">User:</label>-->
+<!--      <select name="user-name" id="user-name" class="form-control">-->
+<!--        <option value="">-&#45;&#45;&#45;&#45;&#45;&#45;</option>-->
+<!--        <option value="Tim">Tim</option>-->
+<!--        <option value="John">John</option>-->
+<!--      </select>-->
+
+<!--    </div>-->
+<!--<div><button type="button" (click)="addPostUser()">Add user and post</button></div>-->
 		<div class="form-control group">
 			<input
 					class="peer-focus:scale-75 peer-focus:-translate-y-6 peer"
@@ -37,7 +48,8 @@
 		<div class="w-2/6">
 			<button
 					type="submit"
-					class="btn btn-primary">Submit
+					class="btn btn-primary"
+      [disabled]="!postForm.valid">Submit
 			</button>
 		</div>
 	</form>
