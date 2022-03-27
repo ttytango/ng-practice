@@ -1,12 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { UiComponent } from './ui/ui.component';
+import { RouterModule } from '@angular/router';
 
+const uiRoutes = [
+  {path: '', component: UiComponent}
+]
 
-// CURRENTLY NOT IN USE
 @NgModule({
-  declarations: [],
+  declarations: [
+    UiComponent
+  ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule.forChild(uiRoutes),
+
   ]
 })
 export class UtilsModule { }

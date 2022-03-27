@@ -9,7 +9,12 @@ const routes: Routes = [
   },
   {
     path: 'posts',
-    loadChildren: () => import('./posts/posts.module').then(m => m.PostsModule)}
+    loadChildren: () => import('./posts/posts.module').then(m => m.PostsModule)
+  },
+  {
+    path: 'common',
+    loadChildren: () => import('./common/utils/utils.module').then(m => m.UtilsModule)
+  }
 ];
 
 @NgModule({
