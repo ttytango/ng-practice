@@ -16,7 +16,7 @@ const postRoutes = [
     PostsComponent,
     PostFormComponent,
     PostListComponent,
-    PostItemComponent
+    PostItemComponent,
   ],
   imports: [
     CommonModule,

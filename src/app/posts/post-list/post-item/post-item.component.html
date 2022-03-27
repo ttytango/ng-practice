@@ -1,12 +1,12 @@
-<div class="relative bg-gray-300 flex flex-col justify-between mt-2 p-4 shadow-sm rounded">
-	<div>
+<div class="relative bg-gray-300 flex flex-col justify-between mt-2 shadow-md rounded  drop-shadow-md">
+	<div class="p-4">
 		<h2 class="font-semibold m-2">{{ post.title }}</h2>
-    <div class="p-2 bg-gray-100">
+    <div class="p-2 bg-gray-100/80">
 		  <h2>{{ post.content }}</h2>
     </div>
 	</div>
-    <h3 class="text-left font-medium p-2">Author: {{ user.name }}</h3>
-	<div class="text-right pt-2 pb-1">
+    <h3 class="text-left font-medium p-2 px-6">Author: {{ user.name }}</h3>
+	<div class="text-right mt-1 py-2 px-4 bg-slate-200/80 rounded-b-md">
 		<button
 				(click)="deletePost(post.id)"
 				class="btn btn-danger">Delete

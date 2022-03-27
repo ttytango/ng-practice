@@ -1,5 +1,8 @@
-<div class="w-full md:w-1/2 p-2 px-6 mx-auto rounded bg-blue-100/60 shadow">
-	<form [formGroup]="postForm" (ngSubmit)="onSubmit()">
+<div class="w-full md:w-1/2 py-4 px-6 mx-auto rounded bg-slate-100/90 drop-shadow-xl">
+	<div class="bg-gray-300/60 p-2 mb-6">
+    <h2>Write a post</h2>
+  </div>
+  <form [formGroup]="postForm" (ngSubmit)="onSubmit()">
 
 <!--    <div class="form-control left group p-6">-->
 <!--      <label for="user-name">User:</label>-->
@@ -28,30 +31,30 @@
 		</div>
     <div class="form-control group">
 
-    <input
-      class="peer-focus:scale-75 peer-focus:-translate-y-6 peer"
-      type="title"
-      name="content"
-      id="content"
-      placeholder=" "
-      required
-      formControlName="content"
-    />
-    <label
-      class="absolute peer-focus:left-0 peer-focus:text-blue-600
+      <input
+        class="peer-focus:scale-75 peer-focus:-translate-y-6 peer"
+        type="title"
+        name="content"
+        id="content"
+        placeholder=" "
+        required
+        formControlName="content"
+      />
+      <label
+        class="absolute peer-focus:left-0 peer-focus:text-blue-600
 					peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100
 					peer-placeholder-shown:translate-y-0"
-      for="content">Enter Content</label>
+        for="content">Enter Content</label>
     </div>
-		<div class="button-group">
+    <div class="button-group">
       <button
 					type="submit"
-					class="btn btn-primary"
+					class="btn btn-primary "
       [disabled]="!postForm.valid">Submit
 			</button>
       <button
         type="button"
-        class="btn btn-danger"
+        class="btn btn-secondary"
         (click)="reset()"
         [disabled]="!postForm.touched">Clear Form
       </button>
