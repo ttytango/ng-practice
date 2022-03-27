@@ -1,5 +1,12 @@
 {
-  "posts": [],
+  "posts": [
+    {
+      "userId": "neo3d2m",
+      "id": "feo0u",
+      "title": "One",
+      "content": "A post."
+    }
+  ],
   "users": [
     {
       "id": "neo3d2m",

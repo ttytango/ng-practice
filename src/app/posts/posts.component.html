@@ -2,10 +2,12 @@
 
   <app-post-form></app-post-form>
 
+
+</div>
+<div class="px-2 md:px-6 py-2 bg-gray-100 min-h-screen">
   <div *ngIf="posts.length === 0">
     <h2 class="font-semibold mt-2">No posts yet!</h2>
   </div>
-
   <div *ngIf="posts.length > 0">
     <app-post-list [posts]="posts"></app-post-list>
   </div>
