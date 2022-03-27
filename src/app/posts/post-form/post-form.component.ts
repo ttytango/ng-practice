@@ -50,10 +50,8 @@ export class PostFormComponent implements OnInit, OnDestroy {
     this.destroy$.unsubscribe();
   }
 
-  // addPostUser() {
-  //   this.postsService.addPostUser()
-  //     .pipe(takeUntil(this.destroy$))
-  //     .subscribe(result => this.postsService.notify(result))
-  //   this.postForm.reset();
-  // }
+
+  reset() {
+    this.postForm.reset();
+  }
 }

@@ -1,3 +1,9 @@
 {
-  "posts": []
+  "posts": [],
+  "users": [
+    {
+      "id": "neo3d2m",
+      "name": "Timothy"
+    }
+  ]
 }

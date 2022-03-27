@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { map, Observable, Subject, tap } from 'rxjs';
 import { Post } from './post';
 import { environment } from '../../environments/environment';
+import { DBUtils } from '../common/utils/db-utils';
 
 @Injectable({
   providedIn: 'root'
@@ -23,14 +24,14 @@ export class PostsService {
   }
 
 
-
   public getPosts(): Observable<Post[]> {
     return this.http.get<Post[]>(this.url + 'posts');
   }
 
   public addPost(title: string, content: string) {
     return this.http.post<Post[]>(this.url + 'posts',  {
-      "id": Post.generateId(this.posts),
+      "userId": "neo3d2m",
+      "id": DBUtils.generateId(this.posts),
       "title": title,
       "content": content,
     }).pipe(

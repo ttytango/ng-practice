@@ -10,7 +10,6 @@
 <!--      </select>-->
 
 <!--    </div>-->
-<!--<div><button type="button" (click)="addPostUser()">Add user and post</button></div>-->
 		<div class="form-control group">
 			<input
 					class="peer-focus:scale-75 peer-focus:-translate-y-6 peer"
@@ -44,14 +43,19 @@
 					peer-placeholder-shown:translate-y-0"
       for="content">Enter Content</label>
     </div>
-
-		<div class="w-2/6">
-			<button
+		<div class="button-group">
+      <button
 					type="submit"
 					class="btn btn-primary"
       [disabled]="!postForm.valid">Submit
 			</button>
-		</div>
+      <button
+        type="button"
+        class="btn btn-danger"
+        (click)="reset()"
+        [disabled]="!postForm.touched">Clear Form
+      </button>
+    </div>
 	</form>
 
 </div>

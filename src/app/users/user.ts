@@ -1,8 +1,6 @@
-import { Post } from '../posts/post';
-
 export class User {
   constructor(
+    public id: string,
     public name: string,
-    public posts: Post[],
   ) { }
 }
