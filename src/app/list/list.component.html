@@ -10,7 +10,7 @@
     </h2>
   </div>
   <div *ngIf="printState == PRINTED">
-    <app-nodes [printedList]="printedList"></app-nodes>
+    <app-nodes [printedList]="printedList" (onDelete)="deleteNode($event)"></app-nodes>
   </div>
     <div class="md:w-6/12 mx-auto mt-8">
 
@@ -41,8 +41,8 @@
       </ng-container>
     </div>
     <div class="button-group">
-      <button type="submit" class="btn btn-danger">submit</button>
-<!--      <button type="button" class="btn btn-secondary" (click)="onPrint()">Pretty print</button>-->
+      <button type="submit" class="btn btn-alt-success">Submit</button>
+      <button type="button" class="btn btn-alt-danger" (click)="onDeleteAll()">Delete All</button>
       <button type="button" class="btn btn-secondary" (click)="onReverse()">Reverse list</button>
       <button type="button" class="btn btn-primary" (click)="changeMode()">Change Form</button>
 

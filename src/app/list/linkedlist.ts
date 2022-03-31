@@ -101,6 +101,31 @@ export class LinkedList {
     return arr;
   }
 
+  public deleteAll() {
+    this.head = null;
+    this.nodeCount = 0;
+  }
+
+  public removeNode(val: any) {
+    let currentNode = this.head
+    let prevNode = null
+    if (currentNode != null && currentNode.data == val) {
+      this.head = currentNode.next;
+      return this.nodeCount--;
+    }
+
+    while (currentNode != null && currentNode.data != val) {
+      prevNode = currentNode;
+      currentNode = currentNode.next;
+    }
+
+    if (currentNode == null) {
+      return;
+    }
+
+    prevNode.next = currentNode.next;
+    return this.nodeCount--;
+  }
 
   public printList() {
     let currentNode = this.head;
