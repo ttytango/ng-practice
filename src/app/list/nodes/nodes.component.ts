@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, EventEmitter, OnInit, Output } from '@angular/core';
 import { animate, state, style, transition, trigger } from '@angular/animations';
 
 @Component({
@@ -20,6 +20,8 @@ import { animate, state, style, transition, trigger } from '@angular/animations'
 export class NodesComponent implements OnInit {
 
   @Input() printedList: any = [];
+  @Output() onDelete: EventEmitter<any> = new EventEmitter()
+
   state: any = "state";
 
   constructor() {

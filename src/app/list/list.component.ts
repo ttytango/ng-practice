@@ -61,6 +61,11 @@ export class ListComponent implements OnInit {
     this.submitted = true;
   }
 
+  onDeleteAll() {
+    this.list.deleteAll();
+    this.updateList();
+  }
+
   changeMode() {
     switch (this.mode) {
       case this.INSERT:
@@ -82,4 +87,12 @@ export class ListComponent implements OnInit {
       : this.searchResult = "Not Found";
   }
 
+  // onDelete($event: any, data: any) {
+  //
+  // }
+  //
+  deleteNode(data: any) {
+    this.list.removeNode(data)
+    this.updateList();
+  }
 }
