@@ -1,0 +1,53 @@
+
+<div class="bg-gray-100/60 p-2 mb-6">
+  <h2 class="text-center text-xl">
+    Start adding data to create a binary tree... under construction!
+  </h2>
+
+  <pre class="bg-gray-300">{{ jsonified }}</pre>
+  <p>Current tree height: {{ treeHeight }}</p>
+
+  <div *ngIf="treeHeight > 0">
+  <h5>BFS level order:</h5>
+    <div *ngFor="let val of queue">
+    <h2>{{ val }}</h2>
+  </div>
+</div>
+
+<div class="md:w-6/12 mx-auto mt-8">
+  <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+    <div class="form-control group">
+
+      <input
+        class="peer-focus:scale-75 peer-focus:-translate-y-6 peer"
+        type="number" name="node" id="node" required ngModel>
+      <label for="node" class="absolute peer-focus:left-0 peer-focus:text-blue-600
+            peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100
+            peer-placeholder-shown:translate-y-0">
+      Add new node:
+      </label>
+    </div>
+    <div class="button-group">
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </form>
+    <div *ngIf="jsonified">
+    <form
+      (ngSubmit)="onSearch(searchForm)"
+      #searchForm="ngForm">
+      <div class="form-control group">
+        <label for="search">Search list for data:</label>
+        <input
+          type="number"
+          name="search"
+          id="search"
+          ngModel>
+        <button
+          type="submit"
+          class="btn btn-primary">Search
+        </button>
+      </div>
+    </form>
+    </div>
+</div>
+</div>
