@@ -87,10 +87,7 @@ export class ListComponent implements OnInit {
       : this.searchResult = "Not Found";
   }
 
-  // onDelete($event: any, data: any) {
-  //
-  // }
-  //
+
   deleteNode(data: any) {
     this.list.removeNode(data)
     this.updateList();

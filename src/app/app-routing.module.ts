@@ -16,8 +16,11 @@ const routes: Routes = [
     loadChildren: () => import('./common/utils/utils.module').then(m => m.UtilsModule)
   },
   {
-    path: 'data-structures',
+    path: 'linked-lists',
     loadChildren: () => import('./list/list.module').then(m => m.ListModule)
+  },
+  {
+    path: 'bst', loadChildren: () => import('./bst/bst.module').then(m => m.BstModule)
   }
 ];
 

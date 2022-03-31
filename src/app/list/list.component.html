@@ -50,12 +50,24 @@
   </form>
 
 
-<form (ngSubmit)="onSearch(searchForm)" #searchForm="ngForm">
-  <div class="form-control group">
-  <label for="search">Search list for data:</label>
-  <input type="text" name="search" id="search" ngModel>
-  <button type="submit" class="btn btn-primary">Search</button>
-  </div>
-</form>
+    <div>
+      <form
+        (ngSubmit)="onSearch(searchForm)"
+        #searchForm="ngForm">
+        <div class="form-control group">
+          <label for="search">Search list for data:</label>
+          <input
+            type="text"
+            name="search"
+            id="search"
+            ngModel>
+          <button
+            type="submit"
+            class="btn btn-primary">Search
+          </button>
+        </div>
+      </form>
 
+    </div>
+  </div>
 </div>
