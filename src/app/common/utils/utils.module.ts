@@ -8,13 +8,14 @@ const uiRoutes = [
 ]
 
 @NgModule({
-  declarations: [
-    UiComponent
-  ],
-  imports: [
-    CommonModule,
-    RouterModule.forChild(uiRoutes),
-
-  ]
+	declarations: [
+		UiComponent,
+	],
+	exports: [
+	],
+	imports: [
+		CommonModule,
+		RouterModule.forChild(uiRoutes),
+	]
 })
 export class UtilsModule { }

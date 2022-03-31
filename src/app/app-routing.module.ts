@@ -14,6 +14,10 @@ const routes: Routes = [
   {
     path: 'common',
     loadChildren: () => import('./common/utils/utils.module').then(m => m.UtilsModule)
+  },
+  {
+    path: 'data-structures',
+    loadChildren: () => import('./list/list.module').then(m => m.ListModule)
   }
 ];
 

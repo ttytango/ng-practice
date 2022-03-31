@@ -1,0 +1,12 @@
+<div>
+    <div class="flex flex-row flex-wrap bg-blue-300 gap-6 my-2 py-2">
+      <div *ngFor="let node of printedList">
+        <div
+          [@stateAnimate]="state"
+          class="outline outline-2 py-1 px-2 my-2 mx-1.5 flex flex-row gap-3 bg-gray-800/75 text-amber-200 rounded spa">
+          <div>{{ node }}</div><div>&raquo;</div>
+        </div>
+      </div>
+      <div class="self-center font-bold">Tail</div>
+    </div>
+</div>

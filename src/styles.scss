@@ -42,7 +42,7 @@ $disabled: rgba(106, 111, 109, 0.31);
     }
   }
   .button-group {
-    @apply w-1/2 space-y-1 mx-auto xl:space-y-0 grid xl:grid-cols-2 xl:gap-32;
+    @apply w-1/2 space-y-1 mx-auto xl:space-y-0 grid xl:grid-cols-2 xl:gap-12;
   }
 
 }

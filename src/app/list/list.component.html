@@ -1,0 +1,61 @@
+
+
+<div class="bg-gray-100/60 p-2 mb-6">
+  <h2 class="text-center text-xl">Start adding data to create a linked list.</h2>
+
+  <pre class="bg-gray-300">{{ jsonified }}</pre>
+  <div class="font-semibold">
+    <h2 class="text-center text-xl">
+      {{searchResult}}
+    </h2>
+  </div>
+  <div *ngIf="printState == PRINTED">
+    <app-nodes [printedList]="printedList"></app-nodes>
+  </div>
+    <div class="md:w-6/12 mx-auto mt-8">
+
+
+  <form (ngSubmit)="onSubmit(f, mode)" #f="ngForm">
+    <div class="form-control group">
+
+    <input
+      class="peer-focus:scale-75 peer-focus:-translate-y-6 peer"
+      type="text" name="node" id="node" required ngModel>
+      <label for="node" class="absolute peer-focus:left-0 peer-focus:text-blue-600
+					peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100
+					peer-placeholder-shown:translate-y-0">
+        {{ mode === PREPEND ? 'Prepend new node:'
+          : mode === INSERT ? 'Insert new node:'
+            : 'Append new node:'}}
+      </label>
+    </div>
+    <div class="form-control group">
+
+    <ng-container *ngIf="mode === INSERT">
+
+      <input class="peer-focus:scale-75 peer-focus:-translate-y-6 peer" type="number" name="position" id="position" ngModel>
+      <label for="position"
+             class="absolute peer-focus:left-0 peer-focus:text-blue-600
+					peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100
+					peer-placeholder-shown:translate-y-0">After position:</label>
+      </ng-container>
+    </div>
+    <div class="button-group">
+      <button type="submit" class="btn btn-danger">submit</button>
+<!--      <button type="button" class="btn btn-secondary" (click)="onPrint()">Pretty print</button>-->
+      <button type="button" class="btn btn-secondary" (click)="onReverse()">Reverse list</button>
+      <button type="button" class="btn btn-primary" (click)="changeMode()">Change Form</button>
+
+    </div>
+  </form>
+
+
+<form (ngSubmit)="onSearch(searchForm)" #searchForm="ngForm">
+  <div class="form-control group">
+  <label for="search">Search list for data:</label>
+  <input type="text" name="search" id="search" ngModel>
+  <button type="submit" class="btn btn-primary">Search</button>
+  </div>
+</form>
+
+</div>

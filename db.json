@@ -1,12 +1,5 @@
 {
-  "posts": [
-    {
-      "userId": "neo3d2m",
-      "id": "2z4hi",
-      "title": "Post",
-      "content": "This is a post"
-    }
-  ],
+  "posts": [],
   "users": [
     {
       "id": "neo3d2m",
