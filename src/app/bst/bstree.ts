@@ -61,6 +61,18 @@ export class BinarySearchTree {
     return null
   }
 
+  invert(node) {
+    if (!node) {
+      return;
+    }
+    let tempNode = node
+    this.invert(node.left);
+    this.invert(node.right);
+    tempNode = node.left
+    node.left = node.right
+    node.right = tempNode
+  }
+
   height(root=this.root) {
     if (root == null)
       return 0;

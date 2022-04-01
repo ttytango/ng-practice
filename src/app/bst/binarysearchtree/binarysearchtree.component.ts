@@ -17,12 +17,14 @@ export class BinarysearchtreeComponent implements OnInit {
   ngOnInit(): void {
     this.tree = new BinarySearchTree();
     this.updateTree();
+
   }
 
   updateTree() {
     this.jsonified = JSON.stringify(this.traverse(this.tree.root), null, 2);
     this.treeHeight = this.tree.height(this.tree.root);
     this.print();
+    this.draw(this.tree.root);
   }
 
   printLevelOrder() {
@@ -55,6 +57,13 @@ export class BinarysearchtreeComponent implements OnInit {
     return tree;
   }
 
+  draw(node) {
+    const tree = node.value;
+    console.log(node.value);
+   tree.left = node.left === null ? null : this.traverse(node.left);
+   tree.right = node.right === null ? null : this.traverse(node.right);
+  }
+
 
 
     onSubmit(f: NgForm) {
@@ -69,5 +78,10 @@ export class BinarysearchtreeComponent implements OnInit {
   print() {
     this.queue = [];
     this.printLevelOrder()
+  }
+
+  onInvert() {
+    this.tree.invert(this.tree.root);
+    this.updateTree();
   }
 }
