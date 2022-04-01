@@ -6,9 +6,9 @@ $disabled: rgba(106, 111, 109, 0.31);
 
 @layer utilities {
   :disabled {
-    filter: opacity(0.5);
+    filter: opacity(0.2);
     &:hover {
-      filter: opacity(0.5);
+      filter: opacity(0.2);
     }
   }
 }

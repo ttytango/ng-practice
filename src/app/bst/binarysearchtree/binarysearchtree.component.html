@@ -4,6 +4,7 @@
     Start adding data to create a binary tree... under construction!
   </h2>
 
+
   <pre class="bg-gray-300">{{ jsonified }}</pre>
   <p>Current tree height: {{ treeHeight }}</p>
 
@@ -29,6 +30,8 @@
     </div>
     <div class="button-group">
       <button type="submit" class="btn btn-primary">Submit</button>
+      <button type="button" class="btn btn-secondary" (click)="onInvert()" [disabled]="treeHeight == 0 || !treeHeight" >Invert Tree!</button>
+
     </div>
   </form>
     <div *ngIf="jsonified">
