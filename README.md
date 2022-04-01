@@ -2,6 +2,9 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.2.
 
+This has a json server for creating and deleting posts as a practice environment to show how angular and services work.
+You can also play around with creating linked lists and binary search trees (still under construction).
+
 ## JSON server
 Run `npm run json-server` or alternatively `json-server --watch ./db.json`
 
